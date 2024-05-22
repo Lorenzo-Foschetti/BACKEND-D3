@@ -9,9 +9,14 @@ public class Rettangolo {
         this.altezza = altezza;
     }
 
-    public void singoloRettangolo() {
-        System.out.println("L'area di questo rettangolo è:" + this.areaRettangolo());
-        System.out.println("Il perimetro di questo rettangolo è:" + this.perimetroRettangolo());
+    public static void singoloRettangolo(Rettangolo unRettangolo) {
+        System.out.println("L'area di questo rettangolo è:" + unRettangolo.areaRettangolo());
+        System.out.println("Il perimetro di questo rettangolo è:" + unRettangolo.perimetroRettangolo());
+
+    }
+
+    public static void dueRettangoli(Rettangolo r1, Rettangolo r2) {
+        System.out.println("La somma dei due perimetri è :" + r1.perimetroRettangolo() + r2.perimetroRettangolo());
 
     }
 
@@ -32,5 +37,13 @@ public class Rettangolo {
 
     public void setBase(double base) {
         this.base = base;
+    }
+
+    @Override
+    public String toString() {
+        return "Rettangolo{" +
+                "base=" + base +
+                ", altezza=" + altezza +
+                '}';
     }
 }
